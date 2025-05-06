@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Implant Using Ultrasound to Boost Mood Under NHS Trial</title>
+    <style>
+        :root {
+            --primary-color: #3366cc;
+            --secondary-color: #f0f7ff;
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --light-text: #666;
+            --background: #fff;
+            --border-color: #ddd;
+            --success-color: #4caf50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--text-color);
+            background-color: var(--background);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .archive-notice {
+            background-color: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+        
+        .article-date {
+            background-color: #f8f8f8;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .article-author {
+            font-weight: 500;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: #444;
+            line-height: 1.4;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.2em;
+        }
+        
+        .article-content h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .article-content h3 {
+            color: var(--primary-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 8px;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .caption {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .quote {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .quote-source {
+            font-weight: 500;
+            font-style: normal;
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .infobox {
+            background-color: var(--secondary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .infobox h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .stat-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .stat {
+            flex: 1;
+            min-width: 200px;
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+        
+        .timeline {
+            margin: 30px 0;
+            border-left: 2px solid var(--primary-color);
+            padding-left: 20px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            left: -26px;
+            top: 5px;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .related-articles {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+        
+        .related-articles h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .related-articles ul {
+            padding-left: 20px;
+        }
+        
+        .related-articles li {
+            margin-bottom: 10px;
+        }
+        
+        .related-articles a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .related-articles a:hover {
+            text-decoration: underline;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .share-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .lead {
+                font-size: 1.1rem;
+            }
+            
+            .stat-box {
+                flex-direction: column;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NEUROSCIENCE HEALTH</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Research</a>
+            <a href="#">Mental Health</a>
+            <a href="#">Innovations</a>
+            <a href="#">Clinical Trials</a>
+        </div>
+    </div>
+
+    <div class="archive-notice">
+        This article is more than <strong>3 months old</strong>
+    </div>
+
+    <h1>Brain implant that could boost mood by using ultrasound to go under NHS trial</h1>
+    
+    <div class="article-meta">
+        <span class="article-date">Published: January 20, 2025</span>
+        <span class="article-author">By Dr. Sarah Johnson, Medical Science Correspondent</span>
+    </div>
+
+    <div class="tags">
+        <span class="tag">Mental Health</span>
+        <span class="tag">Neuroscience</span>
+        <span class="tag">Clinical Trials</span>
+        <span class="tag">Depression Treatment</span>
+    </div>
+
+    <p class="lead">
+        Revolutionary non-invasive technology aims to help patients with treatment-resistant depression through targeted ultrasound stimulation of brain regions associated with mood regulation, offering hope to thousands who haven't responded to conventional treatments.
+    </p>
+
+    <div class="image-container">
+        <img src="/api/placeholder/800/450" alt="Brain implant ultrasound technology illustration" />
+        <p class="caption">The experimental brain implant uses focused ultrasound technology to target specific regions of the brain without invasive surgery. Image: Medical Visualizations Ltd.</p>
+    </div>
+
+    <div class="article-content">
+        <p>
+            A groundbreaking brain implant that uses ultrasound technology to potentially boost mood in patients with treatment-resistant depression is set to undergo clinical trials within the NHS. The non-invasive device, developed by a team of neuroscientists at Imperial College London in collaboration with Oxford Neurotechnologies, represents a significant advancement in neurostimulation therapy and could offer hope to thousands of patients who haven't responded to conventional treatments.
+        </p>
+
+        <p>
+            The trial, named "SONIC-D" (Subcutaneous Optimized Neuromodulation via Implanted Cranial-Ultrasound for Depression), has received £4.2 million in funding from the National Institute for Health and Care Research (NIHR) and will be conducted across five specialist mental health centers throughout the UK.
+        </p>
+
+        <h2>How the Technology Works</h2>
+
+        <p>
+            The implant works by delivering precisely targeted low-intensity focused ultrasound waves to specific regions of the brain associated with mood regulation, including the subgenual cingulate cortex and the ventromedial prefrontal cortex. Unlike traditional deep brain stimulation, which requires invasive surgery to place electrodes directly in the brain, this new approach can stimulate deep brain structures without the need for open brain surgery.
+        </p>
+
+        <p>
+            The device itself is remarkably compact, measuring just 28mm in diameter and 5mm thick, and is implanted under the scalp in a minimally invasive outpatient procedure that takes approximately 45 minutes under local anesthesia. Once in place, the implant can be programmed and controlled wirelessly through an external device, allowing clinicians to adjust treatment parameters without additional surgical procedures.
+        </p>
+
+        <div class="quote">
+            "This technology has the potential to transform how we treat severe depression. By using focused ultrasound, we can modulate neural activity in targeted brain circuits without the risks associated with invasive procedures. The precision of this approach means we can potentially deliver more effective treatment with fewer side effects."
+            <span class="quote-source">— Professor Eleanor Richards, Lead Researcher, Imperial College London</span>
+        </div>
+
+        <h2>Trial Design and Patient Selection</h2>
+
+        <p>
+            The NHS trial will initially involve 120 patients with treatment-resistant depression across five specialist centers in London, Manchester, Edinburgh, Cardiff, and Birmingham. Participants must have failed to respond to at least two different antidepressant medications and a course of psychological therapy to be eligible for inclusion.
+        </p>
+
+        <p>
+            The trial will use a double-blind, randomized controlled design, with two-thirds of participants receiving the active implant and one-third receiving a sham device that looks and feels identical but does not emit ultrasound waves. This rigorous methodology will help researchers determine whether any improvements in patients' conditions are due to the technology itself rather than a placebo effect.
+        </p>
+
+        <div class="infobox">
+            <h3>What is Treatment-Resistant Depression?</h3>
+            <p>Treatment-resistant depression (TRD) is defined as major depressive disorder that does not respond adequately to at least two different antidepressant treatments of adequate dose and duration. Up to 30% of people with depression fall into this category, representing a significant clinical challenge and an area of substantial unmet medical need.</p>
+            <p>Patients with TRD experience prolonged suffering, increased risk of suicide, and significantly reduced quality of life. They often cycle through multiple medications with limited benefit and troublesome side effects.</p>
+        </div>
+
+        <p>
+            Initial safety studies conducted in smaller groups have shown promising results with minimal side effects. In a pilot study of 24 patients conducted at Imperial College London, 67% of participants showed a clinically significant reduction in depression symptoms after 12 weeks of treatment, with 42% achieving remission. The most commonly reported side effects were mild headache and scalp discomfort at the implant site, which typically resolved within the first two weeks.
+        </p>
+
+        <div class="stat-box">
+            <div class="stat">
+                <div class="stat-number">120</div>
+                <div class="stat-label">Patients in NHS trial</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">67%</div>
+                <div class="stat-label">Response rate in pilot study</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">£4.2M</div>
+                <div class="stat-label">NIHR funding</div>
+            </div>
+        </div>
+
+        <h2>The Science Behind the Technology</h2>
+
+        <p>
+            The technology builds on decades of research into neuromodulation and represents a significant step forward in the field of neuropsychiatric treatments. Focused ultrasound has been used in other medical applications for years, but its application to psychiatric conditions is relatively new.
+        </p>
+
+        <p>
+            Dr. James Harrington, neuroscientist and co-developer of the technology, explains: "What makes this approach unique is that ultrasound can be focused through the skull to reach deep brain structures without damaging surrounding tissue. The energy levels we're using are much lower than those used for ablative procedures in other medical applications, allowing us to temporarily modulate neural activity rather than permanently altering brain tissue."
+        </p>
+
+        <p>
+            The implant operates by emitting short pulses of ultrasound energy for approximately 30 minutes, three times per week. The ultrasound waves create subtle mechanical effects in the targeted brain regions, which are believed to alter the activity of neural circuits involved in mood regulation. Preliminary research suggests that this may lead to increased neuroplasticity and restored balance in brain networks that are dysregulated in depression.
+        </p>
+
+        <h2>Broader Implications for Mental Health Treatment</h2>
+
+        <p>
+            If successful, the treatment could be offered more widely to patients who haven't responded to multiple courses of antidepressants or other conventional therapies. Depression affects approximately one in six adults in the UK, with up to 30% of cases proving resistant to standard treatments.
+        </p>
+
+        <p>
+            The economic burden of treatment-resistant depression is substantial, with estimates suggesting it costs the NHS over £3 billion annually in direct treatment costs and lost productivity. New effective treatments could therefore have significant public health and economic benefits.
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2020-2022</div>
+                <div class="timeline-content">Initial technology development and preclinical studies at Imperial College London</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">Pilot study with 24 patients shows promising results</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">January 2025</div>
+                <div class="timeline-content">NHS trial announced with £4.2 million funding</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">March 2025</div>
+                <div class="timeline-content">First patients to be recruited for the trial</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Late 2026</div>
+                <div class="timeline-content">Preliminary results expected</div>
+            </div>
+        </div>
+
+        <p>
+            Mental health charities have welcomed the trial, emphasizing the urgent need for innovative approaches to treating severe depression. "Many people experience depression that doesn't respond to available treatments," said Dr. Sarah Thompson, Research Director at the Mental Health Foundation. "This kind of research offers hope for those who have exhausted other options and demonstrates a commitment to advancing mental health care through innovative approaches."
+        </p>
+
+        <h2>Looking Ahead: Potential Applications Beyond Depression</h2>
+
+        <p>
+            While the current trial focuses specifically on treatment-resistant depression, researchers are already exploring potential applications of the technology for other psychiatric and neurological conditions. Professor Richards notes that "the same underlying technology could potentially be adapted to target different brain regions implicated in conditions such as obsessive-compulsive disorder, PTSD, and certain anxiety disorders."
+        </p>
+
+        <p>
+            The project represents part of a broader NHS initiative to incorporate cutting-edge technologies into mental health treatment, responding to the growing recognition of depression as a major public health challenge with significant economic and social costs.
+        </p>
+
+        <p>
+            The trial is expected to run for 18 months, with preliminary results anticipated by late 2026. Researchers will monitor participants' depression symptoms, quality of life measures, and cognitive function throughout the study period. If the results are positive, the technology could move toward regulatory approval and wider implementation within the NHS within the next 3-5 years.
+        </p>
+    </div>
+
+    <div class="share-buttons">
+        <button class="share-button">Share on Twitter</button>
+        <button class="share-button">Share on Facebook</button>
+        <button class="share-button">Share via Email</button>
+    </div>
+
+    <div class="related-articles">
+        <h3>Related Articles</h3>
+        <ul>
+            <li><a href="#">New approaches to treatment-resistant depression: What's on the horizon</a></li>
+            <li><a href="#">How neurostimulation is changing psychiatric care</a></li>
+            <li><a href="#">The ethics of brain implants for mental health conditions</a></li>
+            <li><a href="#">AI-powered diagnostics revolutionizing early depression detection</a></li>
+            <li><a href="#">Patient perspectives: Living with treatment-resistant depression</a></li>
+        </ul>
+    </div>
+
+    <a href="company.html" class="btn-btn">Company Info</a>
+
+    <footer>
+        <div class="copyright">© 2025 Neuroscience Health | All Rights Reserved</div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Accessibility</a>
+        </div>
+    </footer>
+</body>
+</html>
